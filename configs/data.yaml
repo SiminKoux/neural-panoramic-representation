@@ -1,0 +1,7 @@
+data:    
+    root: "./data"
+    type: "Walking_boy"
+    name: "Walking_boy"
+    scale: 0.5
+    flow_gap: 1
+    use_map: True

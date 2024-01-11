@@ -1,0 +1,26 @@
+model:
+    samples_batch: 10000
+    dev_amount: 1
+    dev_amount_item: 0.1
+    use_positional_mapping1: False
+    n_positional_mapping1: 6
+    n_channels_mapping1: 256
+    n_layers_mapping1: 8
+    use_positional_mapping2: False
+    n_positional_mapping2: 6
+    n_channels_mapping2: 256
+    n_layers_mapping2: 8
+    n_positional_encoding_alpha: 5
+    n_channels_alpha: 256
+    n_layers_alpha: 8
+    n_positional_atlas: 10
+    n_channels_atlas: 256
+    n_layers_atlas: 8
+    lr: 0.0001
+    load_checkpoint: True
+    checkpoint_path: "/local/scratch2/SiminKou/Codes/Neural_Panoramic_Representation/outputs/pretrain/checkpoints"
+    warmstart_mapping1: True
+    warmstart_mapping2: True
+    warmstart_alpha_pred: True
+    warmstart_iter_number: 10000
+    inverse: False

@@ -1,0 +1,17 @@
+batch_size: 30
+vis_epochs: 5
+val_epochs: 5
+vis_every: 10000
+val_every: 10000
+
+iters_per_phase: 
+  train: 300000
+
+epochs_per_phase: 
+  train: 20
+
+w_recon: 1.0
+w_pos: 0.1
+w_sph: 10
+w_alpha: 10
+w_sparse: 0.005

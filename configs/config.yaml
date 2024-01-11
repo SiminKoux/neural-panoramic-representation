@@ -1,0 +1,13 @@
+defaults:
+    - data
+    - model
+    - train
+    - _self_
+
+n_layers: 2
+preload: True
+log_root: outputs
+
+hydra:
+    run:
+        dir: ${log_root}/${data.type}-${n_layers}/${now:%m-%d-%H-%M-%S}
