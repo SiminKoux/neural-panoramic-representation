@@ -11,16 +11,16 @@ def load_image(imfile):
     return img[None]
 
 def is_image(path):
-    path = path.lower()
-    ext = os.path.splitext(path)[-1]
-    return ext == ".png" or ext == ".jpg" or ext == ".bmp"
+    path = path.lower().strip()  # Normalize path
+    ext = os.path.splitext(path)[-1]  # Extract file extension
+    return ext in {".png", ".jpg", ".bmp"} if ext else False  # Check valid extensions
 
 def read_img(path, scale=1):
     im = Image.open(path)
     if scale != 1:
         W, H = im.size
         w, h = int(scale * W), int(scale * H)
-        im = im.resize((w, h), Image.ANTIALIAS)
+        im = im.resize((w, h), Image.Resampling.LANCZOS)
     return im
 
 def load_img_tensor(path, scale=1):
