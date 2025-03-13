@@ -3,7 +3,7 @@
 Simin Kou, Fang-Lue Zhang, Yu-Kun Lai, Neil A. Dodgson
 
 <p align="center">
-  <img src="assets/teaser.png" width="600">
+  <img src="assets/teaser.png" width="900">
   <br>
   <em>Figure 1: A teaser figure for the project.</em>
 </p>
