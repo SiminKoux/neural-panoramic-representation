@@ -2,7 +2,7 @@
 
 Simin Kou, Fang-Lue Zhang, Yu-Kun Lai, Neil A. Dodgson
 
-<p align="center">
+<p>
   <img src="assets/teaser.png" width="900">
   <br>
   <span style="font-size:12px; text-align:left; display:block;">
