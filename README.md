@@ -1,5 +1,7 @@
 <div align="center">
+  
 # Neural Panoramic Representation for Spatially and Temporally Consistent 360° Video Editing
+
 </div>
 
 <p align="center">
