@@ -18,7 +18,7 @@ model:
     n_layers_atlas: 8
     lr: 0.0001
     load_checkpoint: True
-    checkpoint_path: "/local/scratch2/SiminKou/Codes/Neural_Panoramic_Representation/outputs/pretrain/checkpoints"
+    checkpoint_path: "./outputs/pretrain/checkpoints"
     warmstart_mapping1: True
     warmstart_mapping2: True
     warmstart_alpha_pred: True
