@@ -121,8 +121,8 @@ def main(cfg: DictConfig):
     else:
         label = "forward_train"
 
-    n_epochs = 10
-    # n_epochs = cfg.epochs_per_phase["train"]
+    # n_epochs = 10 # for debugging
+    n_epochs = cfg.epochs_per_phase["train"]
     step_ct, val_dict = opt_infer_helper(n_epochs, label=label)
     print("Training Step:", step_ct)
     print("Training is done!")
