@@ -55,3 +55,11 @@ conda activate npr
 conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
 pip install -r requirements.txt
 ```
+
+## 📂 Dataset
+We have included the entire dataset as the /data folder in this repository.
+
+You can also download the dataset from Hugging Face if you only need to use our dataset:
+```sh
+git clone git@hf.co:datasets/SiminKou/360NPR.git
+```
