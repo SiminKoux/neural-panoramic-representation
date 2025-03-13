@@ -1,0 +1,3 @@
+export HYDRA_FULL_ERROR=1
+CUDA_LAUNCH_BLOCKING=1
+python main.py
