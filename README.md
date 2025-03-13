@@ -57,7 +57,7 @@ pip install -r requirements.txt
 ```
 
 ## 📂 Dataset
-We have included the entire dataset as the ``/data`` folder in this repository.<br>
+We have included the entire dataset in this repository as the ``/data`` folder.<br>
 You can also download the dataset from Hugging Face if you only need to use our dataset:
 ```sh
 git clone git@hf.co:datasets/SiminKou/360NPR.git
@@ -68,3 +68,16 @@ To start the training process, run the following command:
 bash run.sh
 ```
 If you want to train a model for a different video (e.g., replacing the example ``Walking_Boy``), update the ``type`` and ``name`` in the ``/configs/data.yaml`` file with the desired values, such as ``Walking_Girl``.
+
+**Notes:**
+The warmstart checkpoints provided in this repository are specifically for the ``Walking_Boy`` video. 
+- The files ``warmstart_uvw_mapping_f.pth`` and ``warmstart_uvw_mapping_b.pth`` can be used for any video with the same resolution without requiring additional training.
+- However, ``warmstart_alpha_pred.pth`` requires warmstart training for each new video beyond the provided ``Walking_Boy``.
+To warmstart alpha mapping for a new video, modify the ``configs/model.yaml`` file by setting the following parameters to ``False``:
+```yaml
+load_checkpoint: False
+warmstart_mapping1: False
+warmstart_mapping1: False
+main_train: False
+```
+No changes are needed for other parameters in this file. After completing the warmstart training for alpha mapping, enable the above four parameters and proceed with the main training process.
