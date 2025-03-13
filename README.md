@@ -22,8 +22,8 @@
   <small>The framework of our proposed <strong>N</strong>eural <strong>P</strong>anoramic <strong>R</strong>epresentation (<strong>NPR</strong>).</small> <be> <sub> Our model represents 360° videos using MLPs, allowing for easy video editing in the true spherical space. Given the captured 360° video, its segmentation masks, and the designed 4D spatiotemporal coordinates as inputs, our model predicts implicit spherical positions for generating spherical content layers, providing each layer's appearance for reconstruction. We incorporate bi-directional mapping by introducing an additional pair of backward mapping MLPs to model the global motion of individual dynamic scenes, facilitating flexible 360° video editing.</sub>
 </p>
 
-## BibTex
-```text
+### 📜 Cite This Paper
+```bibtex
 @inproceedings{kou2024neural,
   title={Neural Panoramic Representation for Spatially and Temporally Consistent 360° Video Editing},
   author={Kou, Simin and Zhang, Fang-Lue and Lai, Yu-Kun and Dodgson, Neil A},
@@ -32,7 +32,6 @@
   year={2024},
   organization={IEEE}
 }
-```
 
 ## Funding
 This work was supported by Marsden Fund Council managed by the Royal Society of New Zealand under Grant MFP-20-VUW-180 and the Royal Society (UK) under Grant No. IES\R1\180126.
