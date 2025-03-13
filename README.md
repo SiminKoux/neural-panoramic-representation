@@ -2,9 +2,11 @@
 
 Simin Kou, Fang-Lue Zhang, Yu-Kun Lai, Neil A. Dodgson
 
-| ![Teaser Image](assets/teaser.png) |
-|:--:|
-| *Figure 1: A teaser figure for the project.* |
+<p align="center">
+  <img src="assets/teaser.png" width="600">
+  <br>
+  <em>Figure 1: A teaser figure for the project.</em>
+</p>
 
 
 **Abstract:** Content-based 360° video editing allows users to manipulate panoramic content for interaction in a dynamic visual world. However, the current related methods (2D neural representation and optical flow) show limitations in producing high-quality panoramic content from 360° videos due to their lack of capacity to model the inherent spatiotemporal relationships among pixels in the true panoramic space. To address this issue, we propose a Neural Panoramic Representation (NPR) method to model the global inter-pixel relationships, facilitating immersive video editing. Specifically, our method utilizes MLP-based networks to learn spherical implicit content layers, by encoding the spherical spatiotemporal positions and appearance details within the panoramic video, and bi-directional mapping between the original video frames and the learned content layers, to capture the interpretable and global omnidirectional visual characteristics of individual dynamic scenes. Additionally, we introduce innovative loss functions (spherical neighborhood consistency and unit spherical regularization) to ensure the creation of appropriate implicit spherical content layers. We further provide an interactive layer neural panoramic editing approach based on the proposed NPR, in the head-mounted display device. We evaluate this framework on diverse real-world 360° videos, showing superior performance on both reconstruction and consistent editing compared to existing state-of-the-art (SOTA) neural representation techniques.
