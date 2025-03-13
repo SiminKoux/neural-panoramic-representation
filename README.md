@@ -45,8 +45,14 @@ git clone https://github.com/SiminKoux/neural-panoramic-representation.git
 cd neural-panoramic-representation
 ```
 
-**Create a Conda environment**  
+**Environment setup**  
 ```sh
+# Create a conda environment
 conda create -n pano python=3.9
+
+# Activate env
 conda activate pano
+
+# Install dependencies
+conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
 ```
