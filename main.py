@@ -106,13 +106,16 @@ def main(cfg: DictConfig):
     alpha_pred_model = model.alpha_pred
     rgb_map_model = model.rgb_mapping
     
-    print("Warmstart the coordinates mapping...")
-    label_1 = "coord_map"
-    warm_start(args, coord_map_model, label_1, N, H, W, train_writer)
+    if args.warmstart_mapping1 and args.warmstart_mapping2:
+        print("Warmstart the coordinates mapping...")
+        label_1 = "coord_map"
+        warm_start(args, coord_map_model, label_1, N, H, W, train_writer)
     
-    print("Warmstart the alpha prediction...")
-    label_2 = "alpha_pred"
-    warm_start(args, alpha_pred_model, label_2, N, H, W, train_writer, train_loader)
+    if args.warmstart_alpha_pred:
+        print("Warmstart the alpha prediction...")
+        label_2 = "alpha_pred"
+        warm_start(args, alpha_pred_model, label_2, N, H, W, train_writer, train_loader)
+    
     print("------------------------------------")
     
     if args.inverse:
@@ -121,12 +124,13 @@ def main(cfg: DictConfig):
     else:
         label = "forward_train"
 
-    # n_epochs = 10 # for debugging
-    n_epochs = cfg.epochs_per_phase["train"]
-    step_ct, val_dict = opt_infer_helper(n_epochs, label=label)
-    print("Training Step:", step_ct)
-    print("Training is done!")
-    print("Outputs:", val_dict.keys())
+    if args.main_train:
+        # n_epochs = 10 # for debugging
+        n_epochs = cfg.epochs_per_phase["train"]
+        step_ct, val_dict = opt_infer_helper(n_epochs, label=label)
+        print("Training Step:", step_ct)
+        print("Training is done!")
+        print("Outputs:", val_dict.keys())
 
 
 if __name__ == "__main__":
