@@ -62,3 +62,9 @@ You can also download the dataset from Hugging Face if you only need to use our 
 ```sh
 git clone git@hf.co:datasets/SiminKou/360NPR.git
 ```
+## 🚀 Training
+To start the training process, run the following command:
+```sh
+bash run.sh
+```
+If you want to train a model for a different video (e.g., replacing the example ``Walking_Boy``), update the type and name fields in the ``/configs/data.yaml`` file with the desired values, such as ``Walking_Girl``.
