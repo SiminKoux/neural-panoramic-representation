@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="[https://doi.org/XXXXX](https://ieeexplore.ieee.org/abstract/document/10765439)">
+  <a href="https://ieeexplore.ieee.org/abstract/document/10765439">
     <img src="https://img.shields.io/badge/IEEE%20ISMAR-2024-blue">
   </a>
 </p>
