@@ -43,8 +43,10 @@ This research was supported by Marsden Fund Council managed by the Royal Society
 ```sh
 git clone https://github.com/SiminKoux/neural-panoramic-representation.git
 cd neural-panoramic-representation
+```
 
 **Create a Conda environment**  
 ```sh
 conda create -n pano python=3.9
 conda activate pano
+```
