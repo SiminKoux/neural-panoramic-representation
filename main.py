@@ -22,7 +22,7 @@ def main(cfg: DictConfig):
     print(OmegaConf.to_yaml(cfg))
 
     # -------- Dataset -------- #
-    dataset_root = cfg.data.data_root  # Get dataset path from config
+    dataset_root = cfg.data.root  # Get dataset path from config
     dataset_name = cfg.data.name
     dataset_scale = cfg.data.scale
     # Ensure dataset path remains absolute and unchanged
