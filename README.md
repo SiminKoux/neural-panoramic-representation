@@ -1,6 +1,6 @@
-<p align="center">
-  <h1>Neural Panoramic Representation for Spatially and Temporally Consistent 360° Video Editing</h1>
-</p>
+<div align="center">
+# Neural Panoramic Representation for Spatially and Temporally Consistent 360° Video Editing
+</div>
 
 <p align="center">
   <a href="https://scholar.google.com/citations?user=mIkY9yIAAAAJ&hl=en">Simin Kou</a> • 
