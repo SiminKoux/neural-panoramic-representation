@@ -1,6 +1,6 @@
-# Neural Panoramic Representation for Spatially and Temporally Consistent 360° Video Editing
-
-**[Simin Kou](https://scholar.google.com/citations?user=mIkY9yIAAAAJ&hl=en)**, **[Fang-Lue Zhang](https://fanglue.github.io/)**, **[Yu-Kun Lai](https://users.cs.cf.ac.uk/Yukun.Lai/)**, **[Neil A. Dodgson](https://people.wgtn.ac.nz/neil.dodgson)** 
+<p align="center">
+  <h1>Neural Panoramic Representation for Spatially and Temporally Consistent 360° Video Editing</h1>
+</p>
 
 <p align="center">
   <a href="https://scholar.google.com/citations?user=mIkY9yIAAAAJ&hl=en">Simin Kou</a> • 
