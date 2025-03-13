@@ -57,8 +57,7 @@ pip install -r requirements.txt
 ```
 
 ## 📂 Dataset
-We have included the entire dataset as the /data folder in this repository.
-
+We have included the entire dataset as the ``/data`` folder in this repository.<br>
 You can also download the dataset from Hugging Face if you only need to use our dataset:
 ```sh
 git clone git@hf.co:datasets/SiminKou/360NPR.git
