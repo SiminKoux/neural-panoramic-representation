@@ -7,8 +7,7 @@ class RGBDataset(Dataset):
     def __init__(self, src_dir, scale=1, start=0, end=-1, ext=""):
         super().__init__()
         self.src_dir = src_dir
-        # files = sorted(filter(is_image, glob.glob(f"{src_dir}/*{ext}")))
-        files = sorted(glob.glob(r'/local/scratch2/SiminKou/Codes/Neural_Panoramic_Representation/data/Walking_boy/frames/*'))
+        files = sorted(filter(is_image, glob.glob(f"{src_dir}/*{ext}")))
         if len(files) < 1:
             raise NotImplementedError
         names = [get_path_name(p) for p in files]
