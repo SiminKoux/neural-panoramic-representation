@@ -36,3 +36,11 @@
 
 ## 💰 Funding
 This research was supported by Marsden Fund Council managed by the Royal Society of New Zealand under Grant MFP-20-VUW-180 and the Royal Society (UK) under Grant No. IES\R1\180126.
+
+
+## ⚙️ Installation
+
+1. **Clone the repository**  
+   ```sh
+   git clone https://github.com/yourusername/yourrepo.git
+   cd yourrepo
