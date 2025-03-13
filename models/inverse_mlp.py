@@ -24,7 +24,7 @@ class InverseMapping(nn.Module):
             use_positional = self.use_positional_mapping_f,      # True
             positional_dim = self.n_positional_mapping_f,        # 6
             num_layers = self.n_layers_mapping_f,                # 8
-            skip_layers = [3, 6])
+            skip_layers = [4, 7])
         
         # R^4->R^4: (u,v,w,t) -> (x,y,z,t)
         self.inverse_mapping_b = PositionalModel(
@@ -33,8 +33,8 @@ class InverseMapping(nn.Module):
             hidden_dim = self.n_channels_mapping_b,              # 256
             use_positional = self.use_positional_mapping_b,      # True
             positional_dim = self.n_positional_mapping_b,        # 6
-            num_layers = self.n_layers_mapping_b,                # 4
-            skip_layers = [])
+            num_layers = self.n_layers_mapping_b,                # 8
+            skip_layers = [4, 7])
         
 
     def forward(self, coords):
