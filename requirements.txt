@@ -3,6 +3,7 @@ Pillow
 numpy==1.21.6
 scikit-image
 imageio
+imageio-ffmpeg
 tqdm
 hydra-core
 omegaconf
