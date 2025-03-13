@@ -32,7 +32,7 @@ class PositionalModel(nn.Module):
             hidden_dim = 256,
             use_positional = True,
             positional_dim = 10,
-            skip_layers = [4, 6],
+            skip_layers = [4, 7],
             num_layers = 8,
             verbose = True,
             use_tanh = False,
