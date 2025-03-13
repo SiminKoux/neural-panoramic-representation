@@ -5,7 +5,7 @@ Simin Kou, Fang-Lue Zhang, Yu-Kun Lai, Neil A. Dodgson
 <p align="center">
   <img src="assets/teaser.png" width="900">
   <br>
-  <em>Figure 1: A teaser figure for the project.</em>
+  <em>Figure 1: The framework of our proposed <strong>N</strong>eural <strong>P</strong>anoramic <strong>R</strong>epresentation (<strong>NPR</strong>). Our model represents 360° videos using MLPs, allowing for easy video editing in the true spherical space. Given the captured 360° video, its segmentation masks, and the designed 4D spatiotemporal coordinates as inputs, our model predicts implicit spherical positions for generating spherical content layers, providing each layer's appearance for reconstruction. We incorporate bi-directional mapping by introducing an additional pair of backward mapping MLPs $\mathbb{B}_{fp}$ and $\mathbb{B}_{bp}$ to model the global motion of individual dynamic scenes, facilitating flexible 360° video editing.</em>
 </p>
 
 
