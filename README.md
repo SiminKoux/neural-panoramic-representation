@@ -48,10 +48,10 @@ cd neural-panoramic-representation
 **Environment setup**  
 ```sh
 # Create a conda environment
-conda create -n pano python=3.9
+conda create -n npr python=3.9
 
 # Activate env
-conda activate pano
+conda activate npr
 
 # Install dependencies
 conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
