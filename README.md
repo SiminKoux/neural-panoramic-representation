@@ -11,7 +11,11 @@
    <a href="https://people.wgtn.ac.nz/neil.dodgson">Neil A. Dodgson</a>
 </p>
 
-[![IEEE ISMAR](https://img.shields.io/badge/IEEE%20ISMAR-2024-blue)](https://ieeexplore.ieee.org/abstract/document/10765439)
+<p align="center">
+  <a href="[https://doi.org/XXXXX](https://ieeexplore.ieee.org/abstract/document/10765439)">
+    <img src="https://img.shields.io/badge/IEEE%20ISMAR-2024-blue">
+  </a>
+</p>
 
 <p align="left">
   <img src="assets/teaser.png" width="900"><br>
