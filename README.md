@@ -81,3 +81,4 @@ warmstart_mapping1: False
 main_train: False
 ```
 No changes are needed for other parameters in this file. After completing the warmstart training for alpha mapping, enable the above four parameters and proceed with the main training process.
+Follow the default setup in ``configs`` and apply the warmstart adjustment mentioned above to obtain the forward mappings. If you also need the backward mapping, simply set ``inverse`` to ``True`` in ``configs/model.yaml``.
