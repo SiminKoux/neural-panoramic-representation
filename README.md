@@ -39,8 +39,7 @@ This research was supported by Marsden Fund Council managed by the Royal Society
 
 
 ## ⚙️ Installation
-
-1. **Clone the repository**  
-   ```sh
-   git clone https://github.com/SiminKoux/neural-panoramic-representation.git
-   cd neural-panoramic-representation
+**Clone the repository**  
+```sh
+git clone https://github.com/SiminKoux/neural-panoramic-representation.git
+cd neural-panoramic-representation
