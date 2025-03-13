@@ -13,16 +13,16 @@ from getData.comDataset import CompositeDataset
 from getData.get_path import get_data_dirs
 
 
-def get_dataset(args):
+def get_dataset(data_root, data_name, data_scale):
     print("------------------------------------")
-    print("Getting the customized Dataset...")
-    rgb_dir, gt_dir = get_data_dirs(args.root, args.name)
+    print("Getting Dataset...")
+    rgb_dir, gt_dir = get_data_dirs(data_root, data_name)
     print("rgb_dir is:", rgb_dir)
     print("gt_dir is:", gt_dir)
     required_dirs = [rgb_dir, gt_dir]
     assert all(d is not None for d in required_dirs), required_dirs
 
-    rgb_dset = RGBDataset(rgb_dir, scale=args.scale, ext = ".png")
+    rgb_dset = RGBDataset(rgb_dir, scale=data_scale, ext = ".png")
     mask_dset = MaskDataset(gt_dir, rgb_dset=rgb_dset)
     dsets = {"rgb": rgb_dset, "gt": mask_dset}
 
