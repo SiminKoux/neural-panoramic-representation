@@ -13,7 +13,7 @@
 
 ## 📄 ISMAR Conference Paper
 
-[![IEEE ISMAR](https://ieeexplore.ieee.org/abstract/document/10765439)
+[![IEEE ISMAR](https://img.shields.io/badge/IEEE%20ISMAR-202X-blue)](https://ieeexplore.ieee.org/abstract/document/10765439)
 
 <p align="left">
   <img src="assets/teaser.png" width="900"><br>
