@@ -1,6 +1,7 @@
 import os
 import torch
-import imageio
+# import imageio
+import imageio.v2 as imageio
 import numpy as np
 from torchvision.transforms import functional as TF
 
