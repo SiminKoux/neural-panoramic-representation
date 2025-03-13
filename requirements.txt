@@ -1,6 +1,6 @@
 opencv-python
 Pillow
-numpy
+numpy==1.21.6
 scikit-image
 imageio
 tqdm
