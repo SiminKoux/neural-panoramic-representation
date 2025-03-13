@@ -14,14 +14,23 @@ from utils.compute_utils import *
 from getData.get_data import *
 
 DEVICE = torch.device("cuda")
+ORIGINAL_WORKING_DIR = os.getcwd()
 
 @hydra.main(config_path="configs", config_name="config", version_base="1.1")
 def main(cfg: DictConfig):
     print("Let's begin!")
-    # print(OmegaConf.to_yaml(cfg))
+    print(OmegaConf.to_yaml(cfg))
 
     # -------- Dataset -------- #
-    dset = get_dataset(cfg.data)
+    dataset_root = cfg.data.data_root  # Get dataset path from config
+    dataset_name = cfg.data.name
+    dataset_scale = cfg.data.scale
+    # Ensure dataset path remains absolute and unchanged
+    if not os.path.isabs(dataset_root):
+        dataset_root = os.path.abspath(os.path.join(ORIGINAL_WORKING_DIR, dataset_root))
+    print(f"Using dataset from: {dataset_root}")
+    dset = get_dataset(dataset_root, dataset_name, dataset_scale)
+    
     N, H, W = len(dset), dset.height, dset.width
     print("There are {} frames in the given video.".format(N))
     
