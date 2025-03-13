@@ -9,6 +9,7 @@
   <a href="https://fanglue.github.io/">Fang-Lue Zhang</a> • 
   <a href="https://users.cs.cf.ac.uk/Yukun.Lai/">Yu-Kun Lai</a> • 
    <a href="https://people.wgtn.ac.nz/neil.dodgson">Neil A. Dodgson</a><br>
+  <br>
   <a href="https://ieeexplore.ieee.org/abstract/document/10765439">
     <img src="https://img.shields.io/badge/IEEE%20ISMAR-2024-blue">
   </a>
