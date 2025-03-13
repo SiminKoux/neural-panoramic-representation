@@ -18,9 +18,10 @@ model:
     n_layers_atlas: 8
     lr: 0.0001
     load_checkpoint: True
-    checkpoint_path: "./outputs/pretrain/checkpoints"
+    checkpoint_path: ${hydra:runtime.cwd}/outputs/pretrain/checkpoints
     warmstart_mapping1: True
     warmstart_mapping2: True
     warmstart_alpha_pred: True
     warmstart_iter_number: 10000
+    main_train: True
     inverse: False
