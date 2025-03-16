@@ -229,7 +229,7 @@ def load_ckpt(args, coord_model, alpha_model, rgb_model, inverse_model):
 
     print("Load Full Model has done!")
 
-def load_forward_ckpt(args, coord_model, alpha_model, rgb_model):
+def load_forward_ckpt(coord_model, alpha_model, rgb_model):
     # The path of the best forward model
     hydra_output_dir = os.path.join(hydra.utils.get_original_cwd(), hydra.core.hydra_config.HydraConfig.get().run.dir)
     
