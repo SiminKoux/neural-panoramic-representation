@@ -10,4 +10,4 @@ log_root: outputs
 
 hydra:
     run:
-        dir: ${log_root}/${data.type}-${n_layers}/${now:%m-%d-%H-%M-%S}
+        dir: ${log_root}/${data.type}-${n_layers}
