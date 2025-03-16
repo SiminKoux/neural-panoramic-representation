@@ -120,7 +120,7 @@ def main(cfg: DictConfig):
     
     if args.inverse:
         label = "backward_train"
-        load_forward_ckpt(args, coord_map_model, alpha_pred_model, rgb_map_model)
+        load_forward_ckpt(coord_map_model, alpha_pred_model, rgb_map_model)
     else:
         label = "forward_train"
 
