@@ -231,10 +231,10 @@ def load_ckpt(args, coord_model, alpha_model, rgb_model, inverse_model):
 
 def load_forward_ckpt(args, coord_model, alpha_model, rgb_model):
     # The path of the best forward model
-    checkpoint_path = args.checkpoint_path
+    hydra_output_dir = os.path.join(hydra.utils.get_original_cwd(), hydra.core.hydra_config.HydraConfig.get().run.dir)
     
     # Load forward best ckpt
-    forward_mapping_path = os.path.join(checkpoint_path, "best_ckpt.pth")
+    forward_mapping_path = os.path.join(hydra_output_dir, "best_ckpt.pth")
     forward_mapping = torch.load(forward_mapping_path)
     
     # Filter out unwanted keys
