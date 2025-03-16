@@ -201,12 +201,12 @@ def warmstarting_model(warmstart_label, samples, N, H, W, warmstart_model,
     
     return warmstart_model
 
-def load_ckpt(args, coord_model, alpha_model, rgb_model, inverse_model):
+def load_ckpt(coord_model, alpha_model, rgb_model, inverse_model):
     # The path of the best forward model
-    checkpoint_path = args.checkpoint_path
+    hydra_output_dir = os.path.join(hydra.utils.get_original_cwd(), hydra.core.hydra_config.HydraConfig.get().run.dir)
     
     # Load forward best ckpt
-    model_path = os.path.join(checkpoint_path, "best_ckpt.pth")
+    model_path = os.path.join(hydra_output_dir, "best_ckpt.pth")
     model = torch.load(model_path)
     
     # Filter out unwanted keys
