@@ -203,8 +203,7 @@ def warmstarting_model(warmstart_label, samples, N, H, W, warmstart_model,
 
 def load_ckpt(coord_model, alpha_model, rgb_model):
     # The path of the best forward model
-    hydra_output_dir = os.path.join(hydra.utils.get_original_cwd(), 
-                                    hydra.core.hydra_config.HydraConfig.get().run.dir)
+    hydra_output_dir = os.path.join(hydra.utils.get_original_cwd(), hydra.core.hydra_config.HydraConfig.get().run.dir)
     
     # Load forward best ckpt
     model_path = os.path.join(hydra_output_dir, "best_ckpt.pth")
@@ -232,8 +231,7 @@ def load_ckpt(coord_model, alpha_model, rgb_model):
 
 def load_forward_ckpt(coord_model, alpha_model, rgb_model):
     # The path of the best forward model
-    hydra_output_dir = os.path.join(hydra.utils.get_original_cwd(), 
-                                    hydra.core.hydra_config.HydraConfig.get().run.dir)
+    hydra_output_dir = os.path.join(hydra.utils.get_original_cwd(), hydra.core.hydra_config.HydraConfig.get().run.dir)
     
     # Load forward best ckpt
     forward_mapping_path = os.path.join(hydra_output_dir, "best_ckpt.pth")
@@ -257,7 +255,7 @@ def load_forward_ckpt(coord_model, alpha_model, rgb_model):
 
 def update_config(cfg, loader):
     """
-    we provide a min number of iterations for each phase,
+    We provide a minimum number of iterations for each phase,
         need to update the config to reflect this
     """
     N = len(loader) * cfg.batch_size
