@@ -201,7 +201,7 @@ def warmstarting_model(warmstart_label, samples, N, H, W, warmstart_model,
     
     return warmstart_model
 
-def load_ckpt(coord_model, alpha_model, rgb_model, inverse_model):
+def load_ckpt(coord_model, alpha_model, rgb_model):
     # The path of the best forward model
     hydra_output_dir = os.path.join(hydra.utils.get_original_cwd(), hydra.core.hydra_config.HydraConfig.get().run.dir)
     
@@ -215,8 +215,8 @@ def load_ckpt(coord_model, alpha_model, rgb_model, inverse_model):
     alpha_dict = {k.replace('alpha_pred.model_alpha.', ''): v for k, v in model.items() if 'alpha_pred.model_alpha.' in k}
     rgb_f_dict = {k.replace('rgb_mapping.rgb_mapping_f.', ''): v for k, v in model.items() if 'rgb_mapping.rgb_mapping_f.' in k}
     rgb_b_dict = {k.replace('rgb_mapping.rgb_mapping_b.', ''): v for k, v in model.items() if 'rgb_mapping.rgb_mapping_b.' in k}
-    inverse_f_dict = {k.replace('inverse_mapping.inverse_mapping_f.', ''): v for k, v in model.items() if 'inverse_mapping.inverse_mapping_f.' in k}
-    inverse_b_dict = {k.replace('inverse_mapping.inverse_mapping_b.', ''): v for k, v in model.items() if 'inverse_mapping.inverse_mapping_b.' in k}
+    # inverse_f_dict = {k.replace('inverse_mapping.inverse_mapping_f.', ''): v for k, v in model.items() if 'inverse_mapping.inverse_mapping_f.' in k}
+    # inverse_b_dict = {k.replace('inverse_mapping.inverse_mapping_b.', ''): v for k, v in model.items() if 'inverse_mapping.inverse_mapping_b.' in k}
     
     # Load the filtered state_dict into the model
     coord_model.mapping_uvw_f.load_state_dict(coord_f_dict, strict=False)
@@ -224,8 +224,8 @@ def load_ckpt(coord_model, alpha_model, rgb_model, inverse_model):
     alpha_model.model_alpha.load_state_dict(alpha_dict)
     rgb_model.rgb_mapping_f.load_state_dict(rgb_f_dict, strict=False)
     rgb_model.rgb_mapping_b.load_state_dict(rgb_b_dict, strict=False)
-    inverse_model.inverse_mapping_f.load_state_dict(inverse_f_dict, strict=False)
-    inverse_model.inverse_mapping_b.load_state_dict(inverse_b_dict, strict=False)
+    # inverse_model.inverse_mapping_f.load_state_dict(inverse_f_dict, strict=False)
+    # inverse_model.inverse_mapping_b.load_state_dict(inverse_b_dict, strict=False)
 
     print("Load Full Model has done!")
 
