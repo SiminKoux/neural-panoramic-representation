@@ -453,28 +453,32 @@ def opt_infer_step(
     print(f"running {val_epochs} train/val steps with {n_epochs_per_val} epochs each.")
 
     for val in range(val_epochs):
-        # Training step
-        step = optimize_model(
-            n_epochs_per_val,
-            train_loader,
-            loss_fncs,
-            model,
-            model_kwargs,
-            start=step,
-            label=label,
-            **kwargs,
-        )
+        if label == "inference":
+            val_dict, val_out_dir = infer_model(step, val, val_loader, model, model_kwargs, **kwargs)
+            return step, val_dict
+        else:
+            # Training step
+            step = optimize_model(
+                n_epochs_per_val,
+                train_loader,
+                loss_fncs,
+                model,
+                model_kwargs,
+                start=step,
+                label=label,
+                **kwargs,
+            )
 
-        # Save the current ckpt
-        print("Iter {:6d} saving checkpoint to {}".format(step, ckpt))
-        latest_model_wts = model.state_dict().copy()
-        torch.save(latest_model_wts, ckpt)
-        
-        # Evaluation step in training process
-        val_dict, val_out_dir = infer_model(step, val, val_loader, model, model_kwargs, **kwargs)
-        
-        if save_grid:
-            utils.save_grid_vis(val_out_dir, val_dict)
+            # Save the current ckpt
+            print("Iter {:6d} saving checkpoint to {}".format(step, ckpt))
+            latest_model_wts = model.state_dict().copy()
+            torch.save(latest_model_wts, ckpt)
+            
+            # Evaluation step in training process
+            val_dict, val_out_dir = infer_model(step, val, val_loader, model, model_kwargs, **kwargs)
+            
+            if save_grid:
+                utils.save_grid_vis(val_out_dir, val_dict)
 
     return step, val_dict
 
