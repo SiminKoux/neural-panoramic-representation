@@ -131,6 +131,15 @@ def main(cfg: DictConfig):
         print("Training Step:", step_ct)
         print("Training is done!")
         print("Outputs:", val_dict.keys())
+    
+    if args.inference:
+        print("Start Inference...")
+        n_epochs = 1
+        load_ckpt(coord_map_model, alpha_pred_model, rgb_map_model)
+        step_ct, val_dict = opt_infer_helper(n_epochs, label="inference")
+        print("Inference Step:", step_ct)
+        print("Inference is done!")
+        print("Outputs:", val_dict.keys())
 
 
 if __name__ == "__main__":
