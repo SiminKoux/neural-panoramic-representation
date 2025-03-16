@@ -9,7 +9,7 @@ class InverseLoss(nn.Module):
         super().__init__()
         self.weight = weight
 
-    def forward(self, batch_out):
+    def forward(self, batch_in, batch_out):
         gt_xyzt = batch_out["gt_xyzt"]
         pred_xyzt_f = batch_out["inverse_xyzt_f"]
         pred_xyzt_b = batch_out["inverse_xyzt_b"]
