@@ -60,7 +60,7 @@ pip install -r requirements.txt
 We have included the entire dataset in this repository as the ``/data`` folder.<br>
 You can also download the dataset from Hugging Face if you only need to use our dataset:
 ```sh
-git clone git@hf.co:datasets/SiminKou/360NPR.git
+git clone https://huggingface.co/datasets/SiminKou/360NPR.git
 ```
 ## 🚀 Training
 To start the training process, run the following command:
