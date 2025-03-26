@@ -82,3 +82,9 @@ main_train: False
 ```
 No changes are needed for other parameters in this file. After completing the warmstart training for alpha mapping, enable the above four parameters and proceed with the main training process.
 Follow the default setup in ``configs`` and apply the warmstart adjustment mentioned above to obtain the forward mappings. If you also need the backward mapping, simply set ``inverse`` to ``True`` in ``configs/model.yaml``.
+
+## Acknowledgement
+Our code is hugely influenced by [LNA](https://github.com/ykasten/layered-neural-atlases) and [Deformable Sprites](https://github.com/vye16/deformable-sprites) and many other projects. We would like to acknowledge them for making great code available for us.
+
+## Copyright and license
+Code and documentation copyright the authors. Code released under the [MIT License](https://reponame/blob/master/LICENSE).
