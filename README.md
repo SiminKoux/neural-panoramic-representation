@@ -32,6 +32,8 @@
 }
 ```
 
+This repository is the official PyTorch implementation of [NPR](https://ieeexplore.ieee.org/abstract/document/10765439), published in ISMAR 2024. You can watch our [video demo](https://vimeo.com/1198343579?share=copy&fl=sv&fe=ci) here.
+
 ## 💰 Funding
 This research was supported by Marsden Fund Council managed by the Royal Society of New Zealand under Grant MFP-20-VUW-180 and the Royal Society (UK) under Grant No. IES\R1\180126.
 
